@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkGPT</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background: #1e1e1e;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 20px;
+            background: rgba(50, 50, 50, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #e91e63;
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .chat-box {
+            height: 450px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #292929;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .user-message .message-container {
+            background-color: #00796b;
+            color: #fff;
+        }
+
+        .bot-message .message-container {
+            background: linear-gradient(135deg, #673ab7, #3f51b5);
+            color: #f0f0f0;
+        }
+
+        .message-container {
+            max-width: 80%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .input-container {
+            display: flex;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #555;
+            background: #333;
+            color: #fff;
+            outline: none;
+        }
+
+        #send-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: #e91e63;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #send-btn:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/LinkedIn_Logo.svg" alt="Bot Profile">
+            <h1>DarkGPT</h1>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Votre question...">
+            <button id="send-btn">Envoyer</button>
+        </div>
+    </div>
+    
+    <!-- Placer l'import map en premier -->
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+    </script>
+
+    <!-- Lien vers le fichier JavaScript externe -->
+    <script type="module" src="script.js"></script>
+
+    <!-- Si vous avez besoin de ce fichier, assurez-vous qu'il n'y ait pas de conflit -->
+    <script type="module"src="main.js"></script> 
+</body>
+</html>
